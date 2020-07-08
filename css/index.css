@@ -1,0 +1,54 @@
+html, body{
+    margin: 0px;
+    height:100%;
+}
+
+header{
+    height:80vh;
+    width:100%;
+    background-color: #5c9cd4a6;
+    background-image: url("../Img/skills.png");
+    
+}
+header, .Info{
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+.title{
+    margin: 0 auto;
+    height: 139px;
+    padding-top: calc(60vh - 139px);
+    
+}
+h1{
+    margin: 0 auto;
+    text-align: center;
+    font-family: cursive;
+    font-size: 6em;
+    color:white;
+}
+h3{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+.break{
+height: 15vh;
+margin: 0;
+background-color: #95bee30d;
+}
+
+.Info{
+    height: 80vh;
+    background-image: url("../Img/bg.png");
+}
+.break>p{
+    margin: 0;
+    padding: 40px;
+    font-size: 18px;
+    font-family: Times new roman;
+    text-align: center;
+}
