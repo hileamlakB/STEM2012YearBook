@@ -7,7 +7,7 @@ header{
     height:80vh;
     width:100%;
     background-color: #5c9cd4a6;
-    background-image: url("../Img/skills.png");
+    background-image: url("../Img/mainBG.JPG");
     
 }
 header, .Info{
@@ -20,6 +20,7 @@ header, .Info{
     margin: 0 auto;
     height: 139px;
     padding-top: calc(60vh - 139px);
+    background-color: #434c759e;
     
 }
 h1{
@@ -34,21 +35,34 @@ h3{
     color: white;
     font-size: 1.5em;
     font-family: monospace;
+    margin: 0;
+    padding: 10px;
+    background-color: #444e86b3;
 }
 .break{
-height: 15vh;
-margin: 0;
-background-color: #95bee30d;
+    height: 38vh;
+    margin: 0;
+    background-color: transparent;
+    
 }
 
 .Info{
-    height: 80vh;
-    background-image: url("../Img/bg.png");
+    height: 200vh;
+    background-image: url("../Img/mainBG2.JPG");
 }
 .break>p{
     margin: 0;
     padding: 40px;
     font-size: 18px;
-    font-family: Times new roman;
+    font-family: cursive;
     text-align: center;
+    color: white;
+    background-color: #343f7be0;
+    height: 100%;
+}
+
+.shade{
+    width: 100%;
+    height: 200vh;
+    background-color:  #434c759e;
 }
