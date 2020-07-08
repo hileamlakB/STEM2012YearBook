@@ -89,9 +89,38 @@ body{
 
 .fullBodyImage{
     position: absolute;
-    background-color: orange;
     right:0px;
     height:100vh;
     width:400px;
     opacity: 0.2;
+}
+
+.imageZoom{
+    position: absolute;
+    width: calc(99vw - 400px);
+    height: 100vh;
+    background-color: #ffc10738;
+    z-index: 10;
+    display: none;
+}
+.closeZoom{
+    position: absolute;
+    right:2px;
+    top:2px;
+}
+
+.handWrittenNotes{
+    /* I dont know how to do it yet but I want the note divs to have
+    a wiggly border. */
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    position: absolute;
+    opacity: 0.4;
+    transform: rotate(-25deg);
+    margin: 60px;
+    margin-left: 82vw;
+}
+.handWrittenNotes:hover{
+    z-index: 2;
 }
