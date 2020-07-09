@@ -1,11 +1,14 @@
-body{
-    background-color: rgba(53, 52, 52, 0.37);
-    margin: 0 0;
-}
 :root{
-    --theam:;
-    --bgcolor:;
+    --theam:gray;
+    --bgcolor:rgba(53, 52, 52, 0.37);
 }
+
+body{
+    background-color: var(--bgcolor);
+    margin: 0 0;
+    /*overflow-x: hidden;*/
+}
+
 .imageDisplay{
     margin-top: 165px;
     margin-left: 250px;
@@ -33,22 +36,23 @@ body{
     margin: 0 auto;
     height: 100%;
     width: auto;
-    padding: 15px;
-    padding-bottom: 0px;
+   
     
 }
 .Image:hover{
    
     height: 130%;
     width: auto;
+    z-index:3;
     
     
 }
 .imageCaption{
     height:70px;
     margin: 0 auto;
-    background-color: gray;
+    background-color: var(--theam);
     border: none;
+    z-index: 2;
 }
 
 .imageCaption>label{
@@ -87,19 +91,31 @@ body{
     margin-left: 260px;
 }
 
+.imageDiv7{
+    transform: rotate(-270deg);
+    margin-top: -130px;
+    margin-left: -162px;
+}
+.imageDiv8{
+    transform: rotate(-60deg);
+    margin-top: -117px;
+    margin-left: 515px;
+}
+
+
+
 .fullBodyImage{
     position: absolute;
     right:0px;
     height:100vh;
     width:400px;
-    opacity: 0.2;
 }
 
 .imageZoom{
     position: absolute;
     width: calc(99vw - 400px);
     height: 100vh;
-    background-color: #ffc10738;
+    background-color: var(--bgcolor); 
     z-index: 10;
     display: none;
 }
@@ -119,8 +135,13 @@ body{
     opacity: 0.4;
     transform: rotate(-25deg);
     margin: 60px;
-    margin-left: 82vw;
+    margin-left: 79vw;
 }
 .handWrittenNotes:hover{
-    z-index: 2;
+    z-index: 10;
+}
+
+.cartoonImage{
+    height: 100vh;
+    width: auto;
 }
