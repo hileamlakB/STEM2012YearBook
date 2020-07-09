@@ -4,7 +4,7 @@ html, body{
 }
 
 header{
-    height:80vh;
+    height:100vh;
     width:100%;
     background-color: #5c9cd4a6;
     background-image: url("../Img/mainBG.JPG");
@@ -47,7 +47,7 @@ h3{
 }
 
 .Info{
-    height: 200vh;
+    height: 302vh;
     background-image: url("../Img/mainBG2.JPG");
 }
 .break>p{
@@ -63,6 +63,44 @@ h3{
 
 .shade{
     width: 100%;
-    height: 200vh;
+    height: 302vh;
     background-color:  #434c759e;
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
 }
+
+.groupPictures{
+    width: 100%;
+    height: calc(300vh / 4 - 24px);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    margin-top: 20px;
+    display: flex;
+}
+.groupPicImages {
+    border-radius: 50%;
+    height: calc(300vh / 4 - 40px);
+    /* background-color: #ffffff0f; */
+    width: calc(300vh / 4 - 40px);
+}
+img{
+    display:inline-block;
+}
+.groupPicDiscription{
+    width: calc(70vw - calc(300vh / 4 ) );
+    height: calc(300vh / 4 - 60px);
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+
+}
+.groupPictures:nth-child(even) {
+    justify-content: flex-end;
+}
+.pictureDisciption{
+    margin: 0;
+    padding-top: 20%;
+    font-size: 20px;
+    color: white;
+}
+              
