@@ -1,6 +1,6 @@
 
 //the zooming function on when the small pictures are clicked
-let imageDiv = document.body.querySelectorAll('.imgDiv');
+let imageDiv = document.body.querySelectorAll('.picAndCaption');
 imageDiv.forEach(zoomImage)
 function zoomImage(div){
 
@@ -15,12 +15,15 @@ function zoomImage(div){
         let zoomedImageSRC = div.children[0].children[0].src;
         let zoomedImage = document.createElement('img');
         zoomedImage.src = zoomedImageSRC;
-        zoomedImage.style.width = "500px";
+        zoomedImage.style.width = "400px";
         zoomedImage.style.height ="auto";
         zoomedImage.style.display ="block";
         zoomedImage.style.margin = "0 auto";
         
-        document.body.querySelector("#imageZoom").append(zoomedImage);
+
+        
+        document.body.querySelector("#photo").append(zoomedImage);
+        document.body.querySelector("#pictureDiscription").innerText =  div.children[0].children[0].alt
 
 
         document.body.querySelector("#imageZoom").style["display"] = "block";
@@ -30,7 +33,7 @@ function zoomImage(div){
 //add a closing functionality to the zoom display div
 document.body.querySelector(".closeZoom").addEventListener("click",closeZoomWindow);
 function closeZoomWindow(){
-    document.body.querySelector("#imageZoom").children[1].remove();
+    document.body.querySelector("#photo").children[0].remove();
     document.body.querySelector("#imageZoom").style["display"] = "none";
 }
 
