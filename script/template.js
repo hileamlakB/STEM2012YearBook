@@ -37,3 +37,19 @@ function closeZoomWindow(){
     document.body.querySelector("#imageZoom").style["display"] = "none";
 }
 
+//the more button funtion
+let moreButton = document.body.querySelector(".fullBodyImage").querySelector("button");
+moreButton.addEventListener("click",displayMoreInfo);
+
+function displayMoreInfo(){
+    console.log("button clicked")
+    document.body.querySelector("#moreInfo").style.display = "block";
+}
+
+
+//add a closing functionality to the moreInfo display div
+document.body.querySelector(".closeMoreInfo").addEventListener("click",closeMoreInfo);
+function closeMoreInfo(){
+    
+    document.body.querySelector("#moreInfo").style.display = "none";
+}

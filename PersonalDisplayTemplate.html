@@ -1,3 +1,5 @@
+<!-- A huge to do is a mobile first development -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/template.css">
-    <link rel="stylesheet" href="css/scrollEffect.css">
-    
-    <link rel="stylesheet" href="others/PRISTINA.TTF";>
-    <link rel="stylesheet" href="others/segoesc.ttf">
-    <link rel="stylesheet" href="others/TrajanPro-Regular.otf">
-    
-    
     
     <title>Document</title>
 </head>
@@ -67,7 +62,7 @@
                 <div class="pic4 picAndCaption">
                     <section class="imageHolder ">
 
-                        <img src="Img/kid4.jpg" class="albumPics"  alt="lorrem impsum deal this is the description of the image adklfjasdfdkfjsdlfjdlskajflkddkflajdlkfjdlakfjdsfjdsklfjsdkljfkdlsj
+                        <img src="Img/kid1.jpg" class="albumPics"  alt="lorrem impsum deal this is the description of the image adklfjasdfdkfjsdlfjdlskajflkddkflajdlkfjdlakfjdsfjdsklfjsdkljfkdlsj
 
                         ">
                         
@@ -81,7 +76,7 @@
                 <div class="pic5 picAndCaption">
                     <section class="imageHolder ">
 
-                        <img src="Img/kid5.jpg" class="albumPics"  alt="lorrem impsum deal this is the description of the image adklfjasdfdkfjsdlfjdlskajflkddkflajdlkfjdlakfjdsfjdsklfjsdkljfkdlsj
+                        <img src="Img/kid2.jpg" class="albumPics"  alt="lorrem impsum deal this is the description of the image adklfjasdfdkfjsdlfjdlskajflkddkflajdlkfjdlakfjdsfjdsklfjsdkljfkdlsj
 
                         ">
                         
@@ -117,7 +112,10 @@
             
             <div class="fullBodyImage">
         
-               <button>More</button>
+               <!-- <p>Kidus Getnet</p> May be not a good Idea considering its destructive ness in the grpahics 
+
+               put it some where else -->
+               <button>More...</button>
         
             </div>
             <div class = "noteDiv">
@@ -142,15 +140,82 @@
         
         
         
-        <div id="imageZoom" class="imageZoom">
-            <i class="closeZoom">X</i>
-            <div id="photo">
-                
-            </div>
-            <p id="pictureDiscription">
-                
-        </p> 
+    <div id="imageZoom" class="imageZoom">
+        <i class="closeZoom">X</i>
+        <div id="photo">
+            
         </div>
+        <p id="pictureDiscription">
+            
+    </p> 
+    </div>
+
+    <div id="moreInfo">
+        <i class="closeMoreInfo">X</i>
+        <img src="Img/KidusGecartoonImage.png" alt="">
+        <form action="">
+           
+            
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                        
+                    <td class="values"><input disabled id="name" type="text" value="Kidus Getnet"></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                        
+                    <td class="values"> <input disabled id="age" type="text" value="18"></td>
+                </tr>
+                <tr>
+                    <td><label for="schoolYear">School Year:</label></td>
+                    <td class="values"><input disabled id="schoolYear" type="text" value="2016-2020"></td>
+                </tr>
+                <tr>
+                    <td><label for="permanentAdress">Permanent Adress</label></td>
+                    <td class="values"><textarea disabled id="permanentAdress">
+                            Yebet Kuter: ,
+                            Kebele 16 kidanemeheret,
+                            Bahir Dar, Ethiopia
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="future">Future</label></td>
+                    <td class="values"><textarea disabled id="future">
+                            He has enrolled to ALA and in the coming Year
+                            in 2013 he will be flying to south afirica to 
+                            atten his class and if things doesnt allow that he will 
+                            take online classes. He plans to become an engineer and 
+                            a phsiscs as well as an enterpernuer.
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="anythingElse">Anything Else</label></td>
+                    <td class="values">
+                        <textarea disabled id="anythingElse">
+                            if there is any exra information you want to convey here 
+                            you chance to do soo. until then see you in 30 years. I hope 
+                            to meet you all in good conditions and positions. yours
+            
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="availableAt">availaible at</label></td>
+                    <td class="values">
+                        <textarea disabled id="anythingElse">
+                            0943421191
+                            KGEMP@gmail.com
+            
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+            
+        </form>
+    </div>
          
     
         <!-- <button class="openGallaryDisplay">More ...</button> -->
@@ -159,5 +224,4 @@
 
 </body>
 <script src="script/template.js"></script>
-<script src="script/scrollEffect.js"></script>
 </html>

@@ -8,7 +8,7 @@
 7. Try out the design with different theams for other people to see if that works
 8. Add a more button on top of the picture that will give a more detailed information about
 the person. including name, address and future path
-
+9. The jason loader program that takes the resources and lay them out in the form of the template
 
 #The 7th one seems to work
 that is all the todo I can think of noq
