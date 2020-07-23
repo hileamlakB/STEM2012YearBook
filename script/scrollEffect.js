@@ -25,48 +25,31 @@ function Animation(){
 
             ".pic1",
             gsapToObj([[0,0],[0.155,0.2],[0.18,0.25],[0.23,0.395]]),
-            
-            ).to(
+
+        ).to(
 
             ".pic2",
             gsapToObj([[0.18,0],[0.15,0.21],[0,0.40],[-0.000503,0.75]]),
             
-            ).to(
-            ".pic3",{
-            motionPath:{
-                path:[[-0.15,-0.10],[-0.10,-0.5],[0,0],[0.4245,0.324]],
-                // type:"cubic",
-                autorotate:false,
-            }, 
-           
+        ).to(
 
-        }).to(
-            ".pic4",{
-            motionPath:{
-                path:[[0,-0.2*height()],[0,-0.4],[0,-0.5],[0,-0.6209]],
-                // type:"cubic",
-                autorotate:false,
-            }, 
-           
-        }).to(
-            ".pic5",{
-            motionPath:{
-                path:[[-0.02,0],[-0.1,0},[-0.2,0},[-0.65,0}],
-                // type:"cubic",
-                autorotate:false,
-            }, 
-           
+            ".pic3",
+            gsapToObj([[-0.15,-0.10],[-0.10,-0.5],[0,0],[0.4245,0.324]]),
+
+        ).to(
+
+            ".pic4",
+            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],[0,-0.6209]])
+        ).to(
+
+            ".pic5",
+            gsapToObj([[-0.02,0],[-0.1,0],[-0.2,0],[-0.664,0]])
         
-        }).to(
-            ".pic6",{
-            motionPath:{
-                path:[[0,-0.232*height()],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677]],
-                // type:"cubic",
-                autorotate:false,
-            }, 
-           
+        ).to(
         
-        });
+            ".pic6",
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677]]), 
+        );
         entryAnim.pause()
               
         const rotationAnim = gsap.timeline(
@@ -120,13 +103,13 @@ function gsapToObj(cords){
         let xcomp = cords[i][0] 
         let ycomp =  cords[i][1]
         obj.motionPath.path.push({
-            x:xcomp,
-            ycomp*height(),
+            x:xcomp*width(),
+            y:ycomp*height(),
         })
-        console.log(obj)
+       
     }
     
-
+    console.log(obj)
     return obj
 }
   

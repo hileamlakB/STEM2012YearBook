@@ -174,17 +174,18 @@ blockquote{
 
 
 .imageZoom{
-    position: absolute;
-    width: calc(99vw - 400px);
-    height: 98vh;
-    background-color: #0c1921e3; 
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #0c1921e3;
     z-index: 11;
     display: none;
-    top: 0;
+    top: -100vh;
 }
 .closeZoom, .closeMoreInfo{
     position: absolute;
-    right:2px;
+    left:22px;
     top:2px;
     color: white;
 }
@@ -197,21 +198,14 @@ blockquote{
 #moreInfo{
     position: relative;
     width: 100%;
-    right: 0;
-    height: 98vh;
+    left: 0;
+    height: 100%;
     background-color: #0c1921e3;
     z-index: 11;
     display: none;
-    top: 0;
+    top: -100vh;
 }
 
-#moreInfo>img{
-    height: 200px;
-}
-#moreInfo>img:hover{
-    height: 400px;
-   
-}
 
 form{
     position: absolute;
