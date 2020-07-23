@@ -1,7 +1,0 @@
-/* May be it is better to use sass here because I will need a to insert different starting angles for the roll
-function to make it work for each picture frame
-*/
-@keyframes roll{
-    from{}
-    to{}
-}

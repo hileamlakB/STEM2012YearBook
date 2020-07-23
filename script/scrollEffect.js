@@ -1,10 +1,18 @@
 let mainBlock = document.body.querySelector("main")
-// mainBlock.addEventListener("wheel",check);
-// mainBlock.addEventListener("scroll",check);
-// mainBlock.addEventListener("toggle",check);
-// mainBlock.addEventListener("ratechange",check);
-// mainBlock.addEventListener("progress",check);
-// mainBlock.scroll.length = "100px;"
-function check(event){
-    console.log(`trigerred ${event}`)
+
+gsap.registerPlugin(ScrollTrigger);
+const entryAnim = gsap.timeline(
+{
+    ScrollTrigger:{
+        scrub:true,
+        pin:true,
+        trigger:'.main',
+        start:"top top",
+        end:"+=90000px",
+    },
+    yoyo:true,
+
 }
+);
+entryAnim.pause()
+entryAnim.to(".pic1",{xPercent:'500'})
