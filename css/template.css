@@ -8,18 +8,17 @@ body,html{
     margin: 0 0;
     height:100%;
    background-color: white;
-    /*overflow-x: hidden;*/
+   
 }
 header, footer{
-    /* width:100vw;
-    height: 100vh; */
-    width:0;
-    height: 0;
+    width:100vw;
+    height: 100vh; 
+    /* width:0;
+    height: 0; */
     background-color: white;
 }
 body{
-    background-image: url("../Img/kidBg.jpg");
-    background-size: cover;
+    
 }
 /*.comparision{
     background-image: url(../Img/kidpic.jpg);
@@ -33,11 +32,19 @@ body{
     opacity: 0.2;
 }*/
 main{
+    
+    height: 100%;
+    width: 100vw;
+    background-image: url("../Img/kidBg.jpg");
+    background-size: cover;
+   
+}
+.shade{
     background-color: rgba(0, 174, 255, 0.11);
     height: 100%;
-    display:flex;
+    display: flex;
     width: 100vw;
-   
+
 }
 .left{
     width: 65%;
@@ -56,7 +63,7 @@ main{
     width:212px;
     z-index: 1;
     height: 300px;
-    position: absolute;
+    position: relative;
 
 }
 .picAndCaption:hover{
@@ -152,10 +159,11 @@ blockquote{
 .fullBodyImage {
     z-index: 2;
     height: 100%;
+    width: 100%;
     /*background-image: url(../Img/KidusGecartoonImage.png);*/
     background-image: url(../Img/cartoonImage2.png);
-    position: absolute;
-    width: 35%;
+    /* position: relative; */
+    
 }
 .fullBodyImage>button{
     position: absolute;
