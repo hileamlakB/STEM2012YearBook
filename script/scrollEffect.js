@@ -49,6 +49,10 @@ function Animation(){
         
             ".pic6",
             gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677]]), 
+
+        ).to(
+            "nothing",
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],[0.53,-0.977]]), 
         );
         entryAnim.pause()
               
@@ -62,11 +66,13 @@ function Animation(){
                 scrub:true
             },
             // yoyo:true,
+            onReverseComplete:previous
         }
         );
         rotationAnim.pause()
         rotationAnim.to(".pic1",{
             rotation:295,
+            
         }).to(".pic2",{
             rotation:329,
         }).to(".pic3",{
@@ -77,7 +83,12 @@ function Animation(){
             rotation:17,
         }).to(".pic6",{
             rotation:126,
+            // onComplete:nextStudent,
+        }).to("nothing",{
+            rotation:530, 
+            onComplete:nextStudent,
         })
+        entryAnim.to()
 }
 Animation()
 function updateAnimation (){
@@ -111,5 +122,13 @@ function gsapToObj(cords){
     
     console.log(obj)
     return obj
+}
+
+function previous(){
+    console.log("back to the top")
+}
+
+function nextStudent(){
+    window.scrollTo({top:height(),behavior:"smooth",})
 }
   
