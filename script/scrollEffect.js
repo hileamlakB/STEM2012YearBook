@@ -21,6 +21,8 @@ function Animation(){
             // yoyo:true,
         }
         );
+        entryAnim.pause();
+
         entryAnim.to(
 
             ".pic1",
@@ -54,7 +56,7 @@ function Animation(){
             "nothing",
             gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],[0.53,-0.977]]), 
         );
-        entryAnim.pause()
+        
               
         const rotationAnim = gsap.timeline(
         {
@@ -88,7 +90,7 @@ function Animation(){
             rotation:530, 
             onComplete:nextStudent,
         })
-        entryAnim.to()
+        
 }
 Animation()
 function updateAnimation (){
@@ -130,5 +132,55 @@ function previous(){
 
 function nextStudent(){
     window.scrollTo({top:height(),behavior:"smooth",})
+    currentStudent = currentStudent.nextStud();
+    currentStudent.load(document.body.querySelector("main"))
+    
 }
-  
+
+function previousStudent(){
+    window.scrollTo({top:height(),behavior:"smooth",})
+    currentStudent = currentStudent.previousStud();
+    currentStudent.load(document.body.querySelector("main"))
+    
+}
+
+function firstStudent(){
+    window.scrollTo({top:height(),behavior:"smooth",})
+    currentStudent = currentStudent.firstStu();
+    currentStudent.load(document.body.querySelector("main"))
+
+}
+
+function lastStudent(){
+    window.scrollTo({top:height(),behavior:"smooth",})
+    currentStudent = currentStudent.lastStu();
+    currentStudent.load(document.body.querySelector("main"))
+}
+//rather than playing with the animation functino which works shitly
+//think of restaring the page
+
+document.body.querySelector(".openNav").addEventListener("click",()=>{
+    Array.from(document.body.querySelector(".navStud").querySelectorAll(".navDetailsGroup")[0].children).forEach((element)=>{
+        if (element.style.display === "inline-block"){
+            element.style.display = "none";
+        }
+        else{
+            element.style.display = "inline-block"
+        }
+    })
+});
+
+document.body.querySelector(".previous").addEventListener("click",()=>{
+    previousStudent()
+})
+document.body.querySelector(".next").addEventListener("click",()=>{
+    nextStudent();
+})
+document.body.querySelector(".first").addEventListener("click",()=>{
+    firstStudent();
+})
+document.body.querySelector(".last").addEventListener("click",()=>{
+    lastStudent();
+})
+
+

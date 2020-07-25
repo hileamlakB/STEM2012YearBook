@@ -242,3 +242,33 @@ textarea{
     border: none;
     border-top: 1px solid;
 }
+
+.navStud {
+    position: absolute;
+    height: 14vh;
+    top: 85vh;
+    right: 27px;
+    z-index: 3;
+}
+
+.navStud>span, .navStud>.navDetailsGroup>span {
+    border-radius: 50%;
+    display: inline-block;
+    margin: calc(calc(13vh - 8.8vh) / 2) 5px;
+    height: 5vh;
+    font-size: 5vh;
+    background-color: white;
+}
+
+.openNav:hover,.navStud>.navDetailsGroup>span:hover {
+    
+    background-color: rgba(97, 95, 95, 0.609);
+    color: white;
+    box-shadow: 1px 1px 1px 1px white;
+}
+.openNav{
+    padding:2.5vh;
+}
+#navDetails{
+    display: none;
+}
