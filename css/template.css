@@ -1,46 +1,35 @@
-:root{
-    --theam:gray;
-    --bgcolor:rgba(53, 52, 52, 0.37);
-}
-/*Dont foget to load the imags in the css so that you can load seems instantaneos*/
-body,html{
+html,body {
     
-    margin: 0 0;
-    height:100%;
-   background-color: white;
-   
-}
-header, footer{
-    width:100vw;
-    height: 100vh; 
-    /* width:0;
-    height: 0; */
-    background-color: white;
+    margin:0;
+    padding: 0;
+    height: 100%;
 }
 body{
-    
+    overflow-x: hidden;
 }
-/*.comparision{
-    background-image: url(../Img/kidpic.jpg);
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
+header, main, footer{
+    width: 100vw;
+    height: 100vh;
+}
+header,footer{
     background-color: white;
-    top: 0;
-    opacity: 0.2;
-}*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+
+}
+
 main{
     
-    height: 100%;
-    width: 100vw;
     background-image: url("../Img/kidBg.jpg");
     background-size: cover;
    
 }
 .shade{
     background-color: rgba(0, 174, 255, 0.11);
+    /* background-image: url("../Img/kidpic.jpg"); */
+    background-size: cover;
     height: 100%;
     display: flex;
     width: 100vw;
@@ -48,113 +37,13 @@ main{
 }
 .left{
     width: 65%;
-    z-index: 11;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-
-.gallaryAlbum{
-    width: 100%;
-    height: 90%;
-}
-.picAndCaption{
-    width:212px;
-    z-index: 1;
-    height: 300px;
-    position: relative;
-
-}
-.picAndCaption:hover{
-    box-shadow: 1px -3px 19px 1px #03f8ec;
-    z-index: 3;
-
-}
-.imageHolder{
-    width: 200px;
-    padding: 0 6px;
-    background-color: #e1e1e1;
-    height: 250px;
-}
-.albumPics{
-    width: auto;
-    height: 250px;
+    height: 100%;  
     display: block;
-    margin: 0 auto;
-}
-
-.imageCaption{
-    width: 100%;
-    height: 50px;
-    background-color:  rgba(2, 11, 21, 0.9);
-    /*background-color: rgba(0, 174, 255, 0.22);*/
-    border: none;
-    z-index: 2;
-}
-
-.imageCaption>label{
-    display: block;
-    /* margin: auto auto; */
-    text-align: center;
-    font-size: 20pt;
-    font-family: Trajan Pro;
-    color: #e1e1e1;
-    width: 100%;
-    height: 100%;
-    padding: 15px 0;
-}
-
-
-.pic1{
-    transform: rotate(-65deg);
-    top: 292px;
-    left: 97px;
-    z-index: 1;
-}
-.pic1:hover{
-   z-index: 2;
-}
-
-.pic2{
-    transform: rotate(-31deg);
-    top: 134px;
-    left: 148px;
-}
-.pic3 {
-    transform: rotate(48deg);
-    top: 98px;
-    left: 294px;
-}
-.pic4 {
-    transform: rotate(186deg);
-    top: 248px;
-    left: 349px;
-}
-.pic5 {
-    transform: rotate(17deg);
-    top: 52px;
-    left: 511px;
-}
-.pic6 {
-    transform: rotate(126deg);
-    top: 243px;
-    left: 520px;
-}
-.quote{
-    width: 100%;
-    height: 10%;
-    text-align: center;
-}
-
-blockquote{
-    font-family: Pristina;
-    font-size: 38pt;
-    margin: 0 auto;
-    color: #e1e1e1;
+    flex-direction: column;  
 }
 .right{
     width: 35%;
+    height: 100%;    
 }
 .fullBodyImage {
     z-index: 2;
@@ -162,7 +51,8 @@ blockquote{
     width: 100%;
     /*background-image: url(../Img/KidusGecartoonImage.png);*/
     background-image: url(../Img/cartoonImage2.png);
-    /* position: relative; */
+    background-size: cover;
+    position: relative; 
     
 }
 .fullBodyImage>button{
@@ -175,62 +65,103 @@ blockquote{
     color: white;
 }
 
+.gallaryAlbum{
+    width: 100%;
+    height: 90%;
+    /* background-color: teal; */
+}
 
-
-.fullBodyImage>p{
-    font-family: Segoe Script;
-    color: white;
-    font-size: 43pt;
-    padding-top: 54vh;
-    padding-left: 56px;
-}
-.cartoonImage{
-    transform: rotate(-3deg);
-    height: 250vh;
-    width: auto;
-    
-}
-.noteDiv{
-    z-index: 1
-}
-.notes{
+.picAndCaption{
+    width:15.5vw;
+    z-index: 1;
+    height: calc(18.8vw + 3.7vw);
     position: absolute;
-    top: 0;
-    width: 35%;
-    height: 100%;
-    z-index: 0;
+    top:0;
+    left:0;
+    display: none;
+
 }
-.noteHolder{
-    width: 270px;
-    /* mix-blend-mode: overlay; */
-    height: 270px;
+.picAndCaption:hover{
+    box-shadow: 1px -3px 19px 1px #03f8ec;
+    z-index: 3;
+
+}
+.imageHolder{
+    width: 15.5vw;
     background-color: #e1e1e1;
-    position: absolute;
-    /* opacity: 3.7; */
-    /* top: 41px; */
-    /* transform: rotate(-30deg); */
-    /* left: -29px;*/
+    height: 18.2vw;
+}
+.albumPics{
+    width: auto;
+    height: 18.2vw;
+    display: block;
+    margin: 0 auto;
 }
 
-.noteHolder>p{
-    font-family:  Rage, Bradley Hand ITC;
-    font-size: 29pt;
-    color: black;
-    
+.imageCaption{
+    width: 100%;
+    height: 3.7vw;
+    background-color:  rgba(2, 11, 21, 0.9);
+    /*background-color: rgba(0, 174, 255, 0.22);*/
+    border: none;
+    z-index: 2;
 }
-.note1{
-    transform: rotate(-45deg);
+
+.imageCaption>label{
+    display: block;
+    /* margin: auto auto; */
     text-align: center;
-    top:70px;
-
-}
-.note1>p{
-   margin: 0;
-    margin-top: 58px;
-    margin-left: 29px;
-    transform: rotate(-45deg);
+    font-size: 1.2vw;
+    font-family: Trajan Pro;
+    color: #e1e1e1;
+    width: 100%;
+    height: 100%;
+    padding: 1.25vw 0;
 }
 
+
+.pic1{
+    
+    left: -15.5vw;
+    z-index: 1;
+}
+.pic2{
+    top: -55vh;
+    left: 11vw;
+}
+.pic3 {
+    transform: rotate(48deg);
+    top: -15.806vh;
+    left: -21.5vw;
+}
+.pic4 {
+    transform: rotate(236deg);
+    top: 100vh;
+    left: 25.5vw;
+}
+.pic5 {
+    transform: rotate(180deg);
+    top: 8.3vh;
+    left: 102.7vw;
+}
+.pic6 {
+    transform: rotate(306deg);
+    top: 103.2vh;
+    left: 24.15vw;
+}
+
+.quote{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+blockquote{
+    font-family: Pristina;
+    font-size: 3.4vw;
+    margin: 0 auto;
+    color: #e1e1e1;
+}
 
 .Image{
     display: block;
@@ -243,17 +174,18 @@ blockquote{
 
 
 .imageZoom{
-    position: absolute;
-    width: calc(99vw - 400px);
-    height: 98vh;
-    background-color: #0c1921e3; 
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #0c1921e3;
     z-index: 11;
     display: none;
-    top: 0;
+    top: -100vh;
 }
 .closeZoom, .closeMoreInfo{
     position: absolute;
-    right:2px;
+    left:22px;
     top:2px;
     color: white;
 }
@@ -264,23 +196,16 @@ blockquote{
     text-align: center;
 }
 #moreInfo{
-    position: absolute;
-    width: 400px;
-    right: 0;
-    height: 98vh;
+    position: relative;
+    width: 100%;
+    left: 0;
+    height: 100%;
     background-color: #0c1921e3;
     z-index: 11;
     display: none;
-    top: 0;
+    top: -100vh;
 }
 
-#moreInfo>img{
-    height: 200px;
-}
-#moreInfo>img:hover{
-    height: 400px;
-   
-}
 
 form{
     position: absolute;
@@ -316,4 +241,34 @@ textarea{
     color: white;
     border: none;
     border-top: 1px solid;
+}
+
+.navStud {
+    position: absolute;
+    height: 14vh;
+    top: 85vh;
+    right: 27px;
+    z-index: 3;
+}
+
+.navStud>span, .navStud>.navDetailsGroup>span {
+    border-radius: 50%;
+    display: inline-block;
+    margin: calc(calc(13vh - 8.8vh) / 2) 5px;
+    height: 5vh;
+    font-size: 5vh;
+    background-color: white;
+}
+
+.openNav:hover,.navStud>.navDetailsGroup>span:hover {
+    
+    background-color: rgba(97, 95, 95, 0.609);
+    color: white;
+    box-shadow: 1px 1px 1px 1px white;
+}
+.openNav{
+    padding:2.5vh;
+}
+#navDetails{
+    display: none;
 }
