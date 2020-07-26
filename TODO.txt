@@ -9,6 +9,7 @@
 8. Add a more button on top of the picture that will give a more detailed information about
 the person. including name, address and future path
 9. The jason loader program that takes the resources and lay them out in the form of the template
+10. correct the font in the scrolling effect page
 
 #The 7th one seems to work
 that is all the todo I can think of noq
