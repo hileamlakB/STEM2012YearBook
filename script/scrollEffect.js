@@ -131,28 +131,28 @@ function previous(){
 }
 
 function nextStudent(){
-    window.scrollTo({top:height(),behavior:"smooth",})
+    window.scrollTo({top:1.6*height(),behavior:"smooth",})
     currentStudent = currentStudent.nextStud();
     currentStudent.load(document.body.querySelector("main"))
     
 }
 
 function previousStudent(){
-    window.scrollTo({top:height(),behavior:"smooth",})
+    window.scrollTo({top:1.6*height(),behavior:"smooth",})
     currentStudent = currentStudent.previousStud();
     currentStudent.load(document.body.querySelector("main"))
     
 }
 
 function firstStudent(){
-    window.scrollTo({top:height(),behavior:"smooth",})
+    window.scrollTo({top:1.6*height(),behavior:"smooth",})
     currentStudent = currentStudent.firstStu();
     currentStudent.load(document.body.querySelector("main"))
 
 }
 
 function lastStudent(){
-    window.scrollTo({top:height(),behavior:"smooth",})
+    window.scrollTo({top:1.6*height(),behavior:"smooth",})
     currentStudent = currentStudent.lastStu();
     currentStudent.load(document.body.querySelector("main"))
 }
