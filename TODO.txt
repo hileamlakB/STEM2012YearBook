@@ -1,6 +1,6 @@
 #To do
 1. get the list of the students and thier pictures and name them correctly 
-2.
+2. moving the cicrle in the front page as a cool animation
 4. Add bootstrap to beautify it 
 5. Gallary display for each individual
 6. Responosive design
