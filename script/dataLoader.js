@@ -37,7 +37,7 @@ class Student{
 
         //set the theam color
         //This may change depending on the format of the theam color
-        colorTintBlock.style.backgroundColor = this.theam;
+        colorTintBlock.style.backgroundImage = `linear-gradient(to bottom, white,${this.theam}`;
 
 
         let album = colorTintBlock.children[0].children[0].children;

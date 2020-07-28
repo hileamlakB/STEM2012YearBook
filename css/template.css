@@ -2,26 +2,17 @@ html,body {
     
     margin:0;
     padding: 0;
-    height: 100%;
+
 }
 body{
     overflow-x: hidden;
 }
-header, main, footer{
-    width: 100vw;
-    height: 100vh;
-}
-header,footer{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
 
-}
+
 
 main{
-    
+    width: 100vw;
+    height: 100vh; 
     background-image: url("../Img/kidBg.jpg");
     background-size: cover;
    
