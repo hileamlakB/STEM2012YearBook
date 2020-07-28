@@ -68,7 +68,7 @@ function Animation(){
                 scrub:true
             },
             // yoyo:true,
-            onReverseComplete:previous
+            // onReverseComplete:previous
         }
         );
         rotationAnim.pause()
@@ -122,13 +122,10 @@ function gsapToObj(cords){
        
     }
     
-    console.log(obj)
+    
     return obj
 }
 
-function previous(){
-    console.log("back to the top")
-}
 
 function nextStudent(){
     window.scrollTo({top:1.6*height(),behavior:"smooth",})
