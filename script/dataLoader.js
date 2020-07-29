@@ -19,9 +19,6 @@ class Student{
         this.friendNotes = this.studentData.friendNotes
         this.theam = this.studentData.theam
         this.bgImage = `url(${this.studentData.bgImage})`
-
-        
-
         this.studentId = id
         this.next = (this.studentId == Student.studNumber - 1 ) ? this.studentId : this.studentId + 1// consider the case at the end and at the begning
         this.previous = (this.studentId == 0 ) ? this.studentId : this.studentId - 1;
@@ -50,6 +47,9 @@ class Student{
         }
 
         colorTintBlock.children[0].children[1].children[1].innerText = this.quote;
+        console.log(getContrast(this.theam));
+        colorTintBlock.querySelector("blockquote").style.color = getContrast(this.theam); 
+        colorTintBlock.querySelector(".quote").querySelector("span").style.color= getContrast(this.theam); 
         colorTintBlock.children[1].children[0].style.backgroundImage = this.cartoonImage;//may be the url isnt neccessary just figure it out later
 
         let table = colorTintBlock.querySelector("#moreInfo").querySelector("table");
@@ -149,3 +149,23 @@ Student.studNumber = data.length;
 
 var currentStudent = new Student(data[0],0)
 currentStudent.load(document.body.querySelector("main"))
+
+function getContrast (hexcolor){
+
+	// If a leading # is provided, remove it
+	if (hexcolor.slice(0, 1) === '#') {
+		hexcolor = hexcolor.slice(1);
+	}
+
+	// Convert to RGB value
+	var r = parseInt(hexcolor.substr(0,2),16);
+	var g = parseInt(hexcolor.substr(2,2),16);
+	var b = parseInt(hexcolor.substr(4,2),16);
+
+	// Get YIQ ratio
+	var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+
+	// Check contrast
+	return (yiq >= 128) ? 'black' : 'white';
+
+};
