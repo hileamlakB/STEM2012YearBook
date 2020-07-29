@@ -32,7 +32,7 @@ header{
     
 }
 .bottomWaveConatiner{
-
+    position: relative;
     width: 100%;
     
 }
@@ -67,12 +67,13 @@ nav ul li:hover{
 
 }
 .topHalf{
-    height: calc( 80vh - 301px);
+    height: 40vh;
     background-color: #0099ff;
     padding: 10px;
 }
 
 .bottomHalf{
+    margin-top: -2vh;
     height: 57vh;
     width:100vw;
      background-image: linear-gradient(to bottom, #0099ff, white)
@@ -113,7 +114,7 @@ h1 {
     top: 16vh;
 }
 .picBG {
-    top: calc(100vh - 411px);
+    top: 40vh;
     background-image: url("../Img/mainBG.png" );
     background-size: conver;
 
@@ -130,7 +131,23 @@ h1 {
     left: 70vw;
     top: 30vh;
 }
-
+svg {
+    width: 100%;
+}
+.blurredSvg{
+    width: 100%;
+    position: absolute;
+    top: 46vh;
+    z-index: -1;
+}
+.bottomSvg{
+    transform-origin: center;
+    transform: rotate(180deg);
+} 
+.blurredSvgBottom{
+    position: absolute; 
+    top: 0;
+}
 
 main{
     width: 100vw;
@@ -226,7 +243,7 @@ main{
     /* margin: auto auto; */
     text-align: center;
     font-size: 1.2vw;
-    font-family: Trajan Pro;
+   
     color: #e1e1e1;
     width: 100%;
     height: 100%;
@@ -266,16 +283,21 @@ main{
 
 .quote{
     position:absolute;
-    width: 100%;
+    top:30vh;
+    left: 0;
+    width: 65%;
     height: 10%;
     text-align: center;
+
+}
+.quote span{
+    font-size: 10vw;
 }
 
 blockquote{
-    font-family: Pristina;
-    font-size: 3.4vw;
+    font-family: 'Indie Flower', cursive;
+    font-size: 10vw;
     margin: 0 auto;
-    color: #e1e1e1;
 }
 
 .Image{
@@ -335,7 +357,7 @@ table{
 
 label{
     color: #82bb28;
-    font-family: cursive;
+    /* font-family: cursive; */
     text-align: -webkit-right;
     width: 100%;
 }
@@ -402,20 +424,22 @@ footer{
 }
 
 @media(max-width:550px){
+
     .left{width:100%;}
+    .quote{width: 100%;}
     .right{display: none;}
 
-    .picAndCaption{width:23.84vw; 
-        height: calc(27.9vw + 5vw);}
+    .picAndCaption{width: 25.84vw;
+        height: calc(30.24vw + 5vw);}
    
-    .imageHolder{width: 23.84vw;
-        height: 27.9vw;
+    .imageHolder{width: 25.84vw;
+        height: 30.4vw;
     }
-    .albumPics{height: 27.9vw;}
+    .albumPics{    height: 30.3vw;}
     
-    .imageCaption{height: 5vw;}
+    .imageCaption{height: 7vw;}
     
-    .imageCaption>label{font-size: 2.6vw;        
+    .imageCaption>label{font-size: 3.7vw;
         padding: 1.2vw 0vw;
     }
     /* blockquote{
