@@ -102,6 +102,9 @@ nav ul li:hover{
 .rightCircle {
     top: -13vw;
     left: calc(100vw - 189px);
+    animation: rightCircleAnim 8s infinite;;
+    animation-direction:alternate;
+    /* background-image: radial-gradient(circle, #0099ff, #00b3ff, #43cafd, #7cdff9, #aff1f8); */
 }
 
 h1 {
@@ -282,8 +285,9 @@ main{
 }
 
 .quote{
-    position:absolute;
-    top:30vh;
+    position: absolute;
+    line-height: 20vh;
+    top: 20vh;
     left: 0;
     width: 65%;
     height: 10%;
@@ -296,7 +300,7 @@ main{
 
 blockquote{
     font-family: 'Indie Flower', cursive;
-    font-size: 10vw;
+    font-size: 8vw;
     margin: 0 auto;
 }
 
@@ -422,6 +426,16 @@ textarea{
 footer{
     height: 100vh;
 }
+
+@keyframes rightCircleAnim{
+  from  { left: calc(100vw - 189px); transform: rotate(0deg);}
+  to {left: calc(5px); background: rotate(360deg);}
+  
+}
+@keyframes leftCircleAnim{
+    from  { left: calc(100vw - 189px); background: red;}
+    to {left: calc(5px); background: red;}
+  }
 
 @media(max-width:550px){
 
