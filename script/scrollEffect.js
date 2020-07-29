@@ -5,7 +5,7 @@ function updateDimention() {
     vh = Math.max(document.documentElement.clienthHeight || 0, window.innerHeight || 0)
 }
 let height = function(){return vh};
-let width = function(){return vw};
+let width = function(){return (vw<=550)? vw*1.8 : vw};
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 function Animation(){
@@ -26,35 +26,35 @@ function Animation(){
         entryAnim.to(
 
             ".pic1",
-            gsapToObj([[0,0],[0.155,0.2],[0.18,0.25],[0.23,0.395]]),
+            gsapToObj([[0,0],[0.155,0.2],[0.18,0.25],[0.23,0.395]],".pic1"),
 
         ).to(
 
             ".pic2",
-            gsapToObj([[0.18,0],[0.15,0.21],[0,0.40],[-0.000503,0.75]]),
+            gsapToObj([[0.18,0],[0.15,0.21],[0,0.40],(width()/1.8<550)?[0.0903,0.75]:[-0.000503,0.75]],".pic2"),
             
         ).to(
 
             ".pic3",
-            gsapToObj([[-0.15,-0.10],[-0.10,-0.5],[0,0],[0.4245,0.324]]),
+            gsapToObj([[-0.15,-0.10],[-0.10,-0.5],[0,0],(width()/1.8<550)?[0.4245,0.224]:[0.4245,0.324]],".pic3"),
 
         ).to(
 
             ".pic4",
-            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],[0,-0.6209]])
+            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],(width()/1.8<550)?[0,-0.4203]:[0,-0.6203]],".pic4")
         ).to(
 
             ".pic5",
-            gsapToObj([[-0.02,0],[-0.1,0],[-0.2,0],[-0.664,0]])
+            gsapToObj([[-0.02,0],[-0.1,0],[-0.2,0],(width()/1.8<550)?[-0.2,0.2]:[-0.644,0]],".pic5")
         
         ).to(
         
             ".pic6",
-            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677]]), 
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],(width()/1.8<550)?[0.2,-0.477]:[0.13,-0.677]],".pic6"), 
 
         ).to(
             "nothing",
-            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],[0.53,-0.977]]), 
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],(width()/1.8<550)?[0.2,-0.477]:[0.53,-0.977]],".pic6"), 
         );
         
               
@@ -96,31 +96,36 @@ Animation()
 function updateAnimation (){
     updateDimention();
     Animation();
+    console.clear()
 
 }
 
 window.onresize=updateAnimation;
 
 
-function gsapToObj(cords){
+function gsapToObj(cords,elementName){
+    
     
     let obj = {
         motionPath:{
             path:[],
             autorotate:true,
         },
+      
         display:"block",
 
     }
     for(let i = 0; i<cords.length;i++){
         let xcomp = cords[i][0] 
         let ycomp =  cords[i][1]
+       
         obj.motionPath.path.push({
             x:xcomp*width(),
             y:ycomp*height(),
         })
        
     }
+    
     
     
     return obj
@@ -180,4 +185,12 @@ document.body.querySelector(".last").addEventListener("click",()=>{
     lastStudent();
 })
 
+function getExactPosition(element) {
+    var rect = element.getBoundingClientRect();
+    return [rect.left,rect.top]
+ }
+ 
+ //may be also add a search function for the friend list
+ //you should learn rejex properly this time
+ //make the quote in a bigger coat format
 

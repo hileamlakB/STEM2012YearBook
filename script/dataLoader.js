@@ -49,12 +49,11 @@ class Student{
             album[i].children[1].children[0].innerText = this.images[i][1][1];           
         }
 
-        colorTintBlock.children[0].children[1].children[0].innerText = this.quote;
+        colorTintBlock.children[0].children[1].children[1].innerText = this.quote;
         colorTintBlock.children[1].children[0].style.backgroundImage = this.cartoonImage;//may be the url isnt neccessary just figure it out later
 
-        let form = colorTintBlock.children[1].children[1].children[1];
-        form.innerHTML =  `                                
-        <table>
+        let table = colorTintBlock.querySelector("#moreInfo").querySelector("table");
+        table.innerHTML =  `                                
             <tbody>
                 <tr>
                     <td><label for="name">Name:</label></td>
@@ -103,9 +102,21 @@ class Student{
                     </td>
                 </tr>
             </tbody>
-        </table>
-                            
-        `     
+              
+            
+        `   
+
+
+        //remove thos starting annoying white space in each text area
+        let allTextArea = target.querySelectorAll('textarea')
+        
+        for(let i=0;i<allTextArea.length;i++ ){
+           
+            allTextArea[i].value = allTextArea[i].value.trim();
+            // console.log("treamed")
+        }
+        
+  
     }
 
     nextStud(){
@@ -119,7 +130,7 @@ class Student{
         return new Student(data[0],0)
     }
     lastStu(){
-        console.log(Student.numberOfStudents - 1)
+       
         return new Student(data[Student.studNumber - 1],Student.studNumber - 1)
     }
 
