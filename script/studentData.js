@@ -13,6 +13,7 @@ var data = [{
         ["Img/kid1.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]],
         ["Img/kid1.jpg",["Image discription","friend Notes"]],
+        ["Img/kid2.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]]],//
     "cartoonImage":"Img/KidusGecartoonImage.png",//
     "friendNotes": ["",""],//
@@ -33,7 +34,9 @@ var data = [{
         ["",["Image discription","friend Notes"]],
         ["",["Image discription","friend Notes"]],
         ["",["Image discription","friend Notes"]],
-        ["",["Image discription","friend Notes"]]],//
+        ["",["Image discription","friend Notes"]],
+        ["",["Image discription","friend Notes"]]
+    ],//
     "cartoonImage":"",//
     "friendNotes": ["",""],//
     "theam":"",

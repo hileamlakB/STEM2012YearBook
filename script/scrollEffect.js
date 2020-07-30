@@ -16,7 +16,7 @@ function Animation(){
                 pin:true,
                 trigger:".main",
                 start:"top top",
-                end:"+=6000px",
+                end:"+=7000px",
             },
             // yoyo:true,
         }
@@ -41,7 +41,7 @@ function Animation(){
         ).to(
 
             ".pic4",
-            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],(width()<550)?[0.15,-0.5203]:(vw/vh <= 1)?[0.15,-0.5203]:[0,-0.6203]],".pic4")
+            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],(width()<550)?[0.1,-0.5503]:(vw/vh <= 1)?[0.15,-0.5203]:[0,-0.6203]],".pic4")
         ).to(
 
             ".pic5",
@@ -53,8 +53,14 @@ function Animation(){
             gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],(width()<550)?[0.3,-0.477]:(vw/vh <= 1)?[0.1,-0.30]:[0.13,-0.677]],".pic6"), 
 
         ).to(
+        
+            ".pic7",
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],(width()<550)?[0.1,-0.297]:(vw/vh <= 1)?[0.1,-0.297]:[0.13,-0.677]],".pic7"), 
+
+        )
+        .to(
             "nothing",
-            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],(width()<550)?[0.2,-0.477]:(vw/vh <= 1)?[0.2,-0.477]:[0.53,-0.977]],".pic6"), 
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],(width()<550)?[0.1,2]:(vw/vh <= 1)?[0.2,-0.477]:[0.53,-0.977]],".pic6"), 
         );
         
               
@@ -63,7 +69,7 @@ function Animation(){
             scrollTrigger:{
                 trigger:".main",
                 start:"top top",
-                end:"+=6000px",
+                end:"+=7000px",
                 pin:true,
                 scrub:true
             },
@@ -86,6 +92,8 @@ function Animation(){
         }).to(".pic6",{
             rotation:126,
             // onComplete:nextStudent,
+        }).to(".pic7",{
+            rotation:176,
         }).to("nothing",{
             rotation:530, 
             onComplete:nextStudent,
@@ -183,6 +191,10 @@ document.body.querySelector(".first").addEventListener("click",()=>{
 })
 document.body.querySelector(".last").addEventListener("click",()=>{
     lastStudent();
+})
+
+document.body.querySelector(".top").addEventListener("click",()=>{
+    window.scrollTo({top:1.5*height(),behavior:"smooth",})
 })
 
 function getExactPosition(element) {

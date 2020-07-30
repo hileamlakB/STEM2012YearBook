@@ -47,7 +47,7 @@ class Student{
         }
 
         colorTintBlock.children[0].children[1].children[1].innerText = this.quote;
-        console.log(getContrast(this.theam));
+    
         colorTintBlock.querySelector("blockquote").style.color = getContrast(this.theam); 
         colorTintBlock.querySelector(".quote").querySelector("span").style.color= getContrast(this.theam); 
         colorTintBlock.children[1].children[0].style.backgroundImage = this.cartoonImage;//may be the url isnt neccessary just figure it out later

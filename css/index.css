@@ -31,6 +31,7 @@ header{
     height: 15vh;
     
 }
+
 .bottomWaveConatiner{
     position: relative;
     width: 100%;
@@ -41,12 +42,17 @@ nav{position: absolute;
     right:2px;
     color:white;
 }
+.mobileNav{
+    
+    display: none !important;
+}
+
 li a{text-decoration: none;
     color: inherit;
 
 }
 
-nav ul li{
+nav ul li, nav li{
     list-style-type: none;
     display: inline-block;
     margin: 4px;
@@ -188,24 +194,34 @@ main{
     
 }
 .fullBodyImage {
-    z-index: 2;
     height: 100%;
     width: 100%;
-    /*background-image: url(../Img/KidusGecartoonImage.png);*/
-    background-image: url(../Img/cartoonImage2.png);
+    /* background-image: url(../Img/KidusGecartoonImage.png); */
+    /* background-image: url(../Img/cartoonImage2.png); */
     background-size: cover;
-    position: relative; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 .fullBodyImage>button{
-    position: absolute;
-    padding: 20px;
-    background-color: transparent;
-    margin: 10px;
-    top: 50%;
-    left: 50%;
+    background-color: #0099ff;
     color: white;
+    border: none;
+    font-size: 4vw;
+    font-family: 'Feldicouth-Norm';
+    box-shadow: 1px 1px 1px 1px white;
+    
+   
+    
 }
+.fullBodyImage>button:hover{
+    background-color:white;
+    color: #0099ff;   
+}
+    
+    
 
 .gallaryAlbum{
     width: 100%;
@@ -290,6 +306,12 @@ main{
     transform: rotate(306deg);
     top: 103.2vh;
     left: 24.15vw;
+}
+.pic7 {
+    transform: rotate(306deg);
+    top: 103.2vh;
+    left: 24.15vw;
+    display: none !important;
 }
 
 .quote{
@@ -412,16 +434,20 @@ textarea{
     border-radius: 50%;
     display: inline-block;
     margin: calc(calc(13vh - 8.8vh) / 2) 5px;
+    /* font-family: 'Feldicouth-Norm'; */
     height: 5vh;
     font-size: 5vh;
-    background-color: white;
+    color:white;
+    background-color: #0099ff;
+    
 }
 
 .openNav:hover,.navStud>.navDetailsGroup>span:hover {
     
-    background-color: rgba(97, 95, 95, 0.609);
-    color: white;
+    background-color: white;
+    color: #0099ff;
     box-shadow: 1px 1px 1px 1px white;
+    
 }
 .openNav{
     padding:2.5vh;
@@ -431,6 +457,17 @@ textarea{
 }
 .mobileMore{
     position: absolute;
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    font-size: 6vw;
+    font-family: 'Feldicouth-Norm';
+    display: none;
+}
+
+.mobileMore:hover {
+    background-color: white;
+    color: #0099ff;
 }
 
 footer{
@@ -448,6 +485,7 @@ footer{
   }
 
 @media(max-width:550px){
+  .mobileMore{display: block;}
 
     .left{width:100%;}
     .quote{width: 100%;}
@@ -456,23 +494,52 @@ footer{
     
 
     .picAndCaption{width: 25.84vw;
-        height: calc(30.24vw + 5vw);}
+        height: calc(30.58vw + 7vw);}
    
     .imageHolder{width: 25.84vw;
-        height: 30.4vw;
+        height: 30.58vw;
     }
-    .albumPics{    height: 30.3vw;}
+    .albumPics{    height: 30.58vw;}
     
     .imageCaption{height: 7vw;}
     
-    .imageCaption>label{font-size: 3.7vw;
+    .imageCaption>label{font-size: 3vw;
         padding: 1.2vw 0vw;
     }
-    /* blockquote{
-    font-size: 5vw;
-       font-weight: bold;
-    } */
+    nav{
+        right: 0;
+        background-color: white;
+        color: #0099ff;
+        top: 0;
+    }
+    .mobileNav{
+        display: inline-block !important;
+       
+    }
+    .navigationList{
+        display: none;
+       
+
+    }
+    .navigationList li{
+        font-size: 6vw;
+        display: block;
     
+    }
+    .mobileHover:hover{
+        background-color: white;
+    }
+    
+      
+    .mobileHover:hover .navigationList{
+    display: block;
+    z-index: 3;
+    /* height: 55px;
+    width: 200px;
+    display: block; */
+    
+    }
+
 
 }
 @media(max-aspect-ratio:1/1){
@@ -489,9 +556,15 @@ footer{
     
     .imageCaption{height: 6vw;}
     
-    .imageCaption>label{font-size: 3.7vw;
+    .imageCaption>label{font-size: 3vw;
         padding: 1.2vw 0vw;
     }
 
+
+}
+@media(min-height:720px){
+    .pic7{
+        display: block !important;
+    }
 
 }

@@ -44,6 +44,11 @@ function closeZoomWindow(){
 }
 
 //the more button funtion
+document.body.querySelector(".mobileMore").addEventListener("click",()=>{
+    document.body.querySelector("#moreInfo").style.display = "block";
+    togleScroll(0)
+});
+
 let moreButton = document.body.querySelector(".fullBodyImage").querySelector("button");
 moreButton.addEventListener("click",()=>{
     document.body.querySelector("#moreInfo").style.display = "block";
