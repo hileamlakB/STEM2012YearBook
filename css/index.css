@@ -23,7 +23,7 @@ header{
 }
 .topWaveConatiner{
     width: 100%;
-    height: 80vh;
+    
     
 }
 .break{
@@ -41,6 +41,11 @@ nav{position: absolute;
     right:2px;
     color:white;
 }
+li a{text-decoration: none;
+    color: inherit;
+
+}
+
 nav ul li{
     list-style-type: none;
     display: inline-block;
@@ -95,8 +100,11 @@ nav ul li:hover{
    
 }
 .leftCircle{
-    top:-13vw;
+    top: calc( 15vh - 160px);
     left: 6px;
+    animation: leftCircleAnimation 8s infinite;;
+    animation-direction:alternate;
+
 }
 
 .rightCircle {
@@ -119,7 +127,7 @@ h1 {
 .picBG {
     top: 40vh;
     background-image: url("../Img/mainBG.png" );
-    background-size: conver;
+    background-size: cover;
 
     width: 100vw;
     height: 100vh;
@@ -140,7 +148,7 @@ svg {
 .blurredSvg{
     width: 100%;
     position: absolute;
-    top: 46vh;
+    top: 41vh;
     z-index: -1;
 }
 .bottomSvg{
@@ -155,7 +163,7 @@ svg {
 main{
     width: 100vw;
     height: 100vh; 
-    background-image: url("../Img/kidBg.jpg");
+    
     background-size: cover;
    
 }
@@ -296,6 +304,8 @@ main{
 }
 .quote span{
     font-size: 10vw;
+    border-radius: 50%;
+    background-color: #0099ff61;
 }
 
 blockquote{
@@ -432,9 +442,9 @@ footer{
   to {left: calc(5px); background: rotate(360deg);}
   
 }
-@keyframes leftCircleAnim{
-    from  { left: calc(100vw - 189px); background: red;}
-    to {left: calc(5px); background: red;}
+@keyframes leftCircleAnimation{
+    from  { left: calc(5px);}
+    to {left: calc(100vw - 189px); }
   }
 
 @media(max-width:550px){
@@ -442,6 +452,8 @@ footer{
     .left{width:100%;}
     .quote{width: 100%;}
     .right{display: none;}
+    .rightCircle, .leftCircle{display: none;}
+    
 
     .picAndCaption{width: 25.84vw;
         height: calc(30.24vw + 5vw);}
@@ -461,5 +473,25 @@ footer{
        font-weight: bold;
     } */
     
+
+}
+@media(max-aspect-ratio:1/1){
+
+    
+
+    .picAndCaption{width: 20.84vw;
+        height: calc(24.38vw + 5vw);}
+   
+    .imageHolder{width: 20.84vw;
+        height: 24.38vw;
+    }
+    .albumPics{    height: 24.38vw;}
+    
+    .imageCaption{height: 6vw;}
+    
+    .imageCaption>label{font-size: 3.7vw;
+        padding: 1.2vw 0vw;
+    }
+
 
 }

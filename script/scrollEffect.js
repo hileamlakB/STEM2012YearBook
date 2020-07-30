@@ -26,35 +26,35 @@ function Animation(){
         entryAnim.to(
 
             ".pic1",
-            gsapToObj([[0,0],[0.155,0.2],[0.18,0.25],(width()<550)?[0.5,0.05]:[0.23,0.395]],".pic1"),
+            gsapToObj([[0,0],[0.155,0.2],[0.18,0.25],(width()<550)?[0.5,0.05]:(vw/vh <= 1)?[0.5,0.1]:[0.23,0.395]],".pic1"),
 
         ).to(
 
             ".pic2",
-            gsapToObj([[0.18,0],[0.15,0.21],[0,0.40],(width()<550)?[0.3703,0.705]:[-0.000503,0.75]],".pic2"),
+            gsapToObj([[0.18,0],[0.15,0.21],[0,0.40],(width()<550)?[0.3703,0.705]:(vw/vh <= 1)?[0.2703,0.805]:[-0.000503,0.75]],".pic2"),
             
         ).to(
 
             ".pic3",
-            gsapToObj([[-0.15,-0.10],[-0.10,-0.5],[0,0],(width()<550)?[0.5245,0.424]:[0.4245,0.324]],".pic3"),
+            gsapToObj([[-0.15,-0.10],[-0.10,-0.5],[0,0],(width()<550)?[0.5245,0.424]:(vw/vh <= 1)?[0.5245,0.524]:[0.4245,0.324]],".pic3"),
 
         ).to(
 
             ".pic4",
-            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],(width()<550)?[0.15,-0.5203]:[0,-0.6203]],".pic4")
+            gsapToObj([[0,-0.2],[0,-0.4],[0,-0.5],(width()<550)?[0.15,-0.5203]:(vw/vh <= 1)?[0.15,-0.5203]:[0,-0.6203]],".pic4")
         ).to(
 
             ".pic5",
-            gsapToObj([[-0.02,0],[-0.1,0],[-0.2,0],(width()<550)?[-0.8,0.5]:[-0.644,0]],".pic5")
+            gsapToObj([[-0.02,0],[-0.1,0],[-0.2,0],(width()<550)?[-0.8,0.5]:(vw/vh <= 1)?[-0.8,0.5]:[-0.644,0]],".pic5")
         
         ).to(
         
             ".pic6",
-            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],(width()<550)?[0.3,-0.477]:[0.13,-0.677]],".pic6"), 
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],(width()<550)?[0.3,-0.477]:(vw/vh <= 1)?[0.1,-0.30]:[0.13,-0.677]],".pic6"), 
 
         ).to(
             "nothing",
-            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],(width()<550)?[0.2,-0.477]:[0.53,-0.977]],".pic6"), 
+            gsapToObj([[0,-0.232],[0.43,-0.532],[0.1,-0.632],[0.13,-0.677],(width()<550)?[0.2,-0.477]:(vw/vh <= 1)?[0.2,-0.477]:[0.53,-0.977]],".pic6"), 
         );
         
               
@@ -133,28 +133,28 @@ function gsapToObj(cords,elementName){
 
 
 function nextStudent(){
-    window.scrollTo({top:1.6*height(),behavior:"smooth",})
+    window.scrollTo({top:1.5*height(),behavior:"smooth",})
     currentStudent = currentStudent.nextStud();
     currentStudent.load(document.body.querySelector("main"))
     
 }
 
 function previousStudent(){
-    window.scrollTo({top:1.6*height(),behavior:"smooth",})
+    window.scrollTo({top:1.5*height(),behavior:"smooth",})
     currentStudent = currentStudent.previousStud();
     currentStudent.load(document.body.querySelector("main"))
     
 }
 
 function firstStudent(){
-    window.scrollTo({top:1.6*height(),behavior:"smooth",})
+    window.scrollTo({top:1.5*height(),behavior:"smooth",})
     currentStudent = currentStudent.firstStu();
     currentStudent.load(document.body.querySelector("main"))
 
 }
 
 function lastStudent(){
-    window.scrollTo({top:1.6*height(),behavior:"smooth",})
+    window.scrollTo({top:1.5*height(),behavior:"smooth",})
     currentStudent = currentStudent.lastStu();
     currentStudent.load(document.body.querySelector("main"))
 }
@@ -193,4 +193,11 @@ function getExactPosition(element) {
  //may be also add a search function for the friend list
  //you should learn rejex properly this time
  //make the quote in a bigger coat format
+
+
+
+
+
+
+ 
 
