@@ -30,12 +30,12 @@ var data = [{
     "anythingElse":"Nope",//
     "socialMedia":"*****@gmail.com , **********",//
     "images":[
+        ["Img/kid4.jpg",["Image discription","friend Notes"]],
+        ["Img/kid4.jpg",["Image discription","friend Notes"]],
         ["Img/kid1.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]],
         ["Img/kid1.jpg",["Image discription","friend Notes"]],
-        ["Img/kid2.jpg",["Image discription","friend Notes"]],
-        ["Img/kid1.jpg",["Image discription","friend Notes"]],
-        ["Img/kid2.jpg",["Image discription","friend Notes"]],
+        ["Img/kid4.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]]],//
     "cartoonImage":"Img/KidusGecartoonImage.png",//
     "friendNotes": ["",""],//
@@ -54,11 +54,11 @@ var data = [{
     "images":[
         ["Img/kid1.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]],
-        ["Img/kid1.jpg",["Image discription","friend Notes"]],
+        ["Img/kid4.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]],
-        ["Img/kid1.jpg",["Image discription","friend Notes"]],
+        ["Img/kid4.jpg",["Image discription","friend Notes"]],
         ["Img/kid2.jpg",["Image discription","friend Notes"]],
-        ["Img/kid2.jpg",["Image discription","friend Notes"]]],//
+        ["Img/kid4.jpg",["Image discription","friend Notes"]]],//
     "cartoonImage":"Img/KidusGecartoonImage.png",//
     "friendNotes": ["",""],//
     "theam":"rgba(192, 205, 214, 0.5)",
