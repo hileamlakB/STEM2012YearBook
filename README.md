@@ -10,7 +10,7 @@ Here is a demo hosted on [github](https://hileamlakb.github.io/STEM2012YearBook/
 
 ## Screenshots
 
-`![main screen](./main.png)`
+![main screen](./main.png)`
 
 ## Technologies
 `html`, 
