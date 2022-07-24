@@ -1,1 +1,1 @@
-This is a website for the 2012 class of BDU STEM center. it is like a year book but book but online. More like a year website.
+This is a website for the BDU STEM center class of 2012. It is like a year book but online. More like a year website.
